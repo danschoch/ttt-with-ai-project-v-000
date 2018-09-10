@@ -9,13 +9,14 @@ puts "0 Players, 1 Player, 2 Players"
 
 user_game_choice = gets.strip
 
-if user_game_choice
+if user_game_choice == "0 Players"
+  game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
+  until game.won?
+    game.play
+  end
+  play_again
+end
 
-end
-game = Game.new
-until game.won?
-  game.play
-end
 
 def play_again
   play_again = ""
