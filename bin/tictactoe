@@ -9,24 +9,17 @@ puts "0 Players, 1 Player, 2 Players"
 
 user_game_choice = gets.strip
 
-def play_again
-  play_again = ""
-  until play_again.downcase == "n" || play_again.downcase == "no"
-    puts "Would you like to play again?"
-    play_again = gets.strip
-    play_again.downcase == "y" || play_again.downcase == "yes"
-    game = Game.new
-    until game.won?
-      game.play
-    end
-  end
-end
+
 
 
 if user_game_choice == "0 Players"
-  game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
-  until game.won?
-    game.play
-  end
-  play_again
+  zero_player_game
+
+if user_game_choice == "1 Player"
+  one_player_game
+
+if user_game_choice == "2 Players"
+  two_player_game
 end
+
+play_again
