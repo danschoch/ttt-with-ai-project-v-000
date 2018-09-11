@@ -20,17 +20,25 @@ def zero_player_game
 end
 
 def one_player_game
-  game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+  user_turn_selection
   until game.won?
     game.play
   end
   play_again
 end
 
-def user_turn_selection(player)
+def user_turn_selection
   puts "Please select from the following tokens: X, O"
-  puts "Player with token "X" will go first."
+  puts "Player with token 'X' will go first."
   token_sel = gets.strip
-  if token_sel == "X" or "O"
+  if token_sel == "X"
+    game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+  end
+  if token_sel == "O"
+    game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
+  end
+  game
+end
+
 
 end
