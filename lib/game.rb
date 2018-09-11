@@ -52,6 +52,7 @@ class Game
     else
       turn
     end
+    self.board.display
   end
 
   def play
