@@ -43,6 +43,10 @@ end
 
 def two_player_game
   puts "Player with token 'X' will go first."
+  game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
+  until game.won?
+    game.play
+  end
 
 
 end
