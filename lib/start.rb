@@ -31,7 +31,6 @@ def zero_player_game
   until game.won?
     game.play
   end
-  play_again
 end
 
 def one_player_game
@@ -39,7 +38,6 @@ def one_player_game
   until game.won?
     game.play
   end
-  play_again
 end
 
 
