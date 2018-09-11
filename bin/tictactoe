@@ -14,9 +14,11 @@ user_game_choice = gets.strip
 
 if user_game_choice == "0 Players"
   zero_player_game
+end
 
 if user_game_choice == "1 Player"
   one_player_game
+end
 
 if user_game_choice == "2 Players"
   two_player_game
