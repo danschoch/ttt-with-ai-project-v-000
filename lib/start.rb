@@ -3,10 +3,24 @@ def play_again
   until play_again.downcase == "n" || play_again.downcase == "no"
     puts "Would you like to play again?"
     play_again = gets.strip
-    play_again.downcase == "y" || play_again.downcase == "yes"
-    game = Game.new
-    until game.won?
-      game.play
+    if play_again.downcase == "y" || play_again.downcase == "yes"
+      puts "What kind of game would you like to play?"
+      puts "Please type your preference from the following selections:"
+      puts "0 Players, 1 Player, 2 Players"
+
+      user_game_choice = gets.strip
+
+      if user_game_choice == "0 Players"
+        zero_player_game
+      end
+
+      if user_game_choice == "1 Player"
+        one_player_game
+      end
+
+      if user_game_choice == "2 Players"
+        two_player_game
+      end
     end
   end
 end
