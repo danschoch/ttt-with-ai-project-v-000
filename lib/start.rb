@@ -47,6 +47,7 @@ def two_player_game
   until game.won?
     game.play
   end
+end
 
 
 end
