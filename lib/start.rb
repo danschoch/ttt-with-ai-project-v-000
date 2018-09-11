@@ -48,7 +48,7 @@ def zero_player_game
 end
 
 def one_player_game
-  user_turn_selection
+  game = user_turn_selection
   until game.won?
     game.play
   end
