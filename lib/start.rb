@@ -48,5 +48,3 @@ def two_player_game
     game.play
   end
 end
-
-

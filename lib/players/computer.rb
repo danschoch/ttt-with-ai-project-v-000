@@ -6,7 +6,7 @@ module Players
       if board.valid_move?(comp_input)
         comp_input.to_s
       else
-        self.move.board
+        self.move(board)
       end
     end
   end
