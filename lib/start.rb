@@ -17,9 +17,11 @@ def user_turn_selection
   token_sel = gets.strip
   if token_sel == "X"
     game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+    puts "You are Player 1."
   end
   if token_sel == "O"
     game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
+    puts "You are Player 2."
   end
   game
 end
@@ -41,6 +43,8 @@ def one_player_game
 end
 
 
+def two_player_game
+  puts "Player with token 'X' will go first."
 
 
 end
